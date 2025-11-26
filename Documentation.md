@@ -28,18 +28,18 @@ Conformément aux consignes, les services principaux (**SQL Server Agent** et **
 - **Compte de service :** `AUTORITE NT\Système`
 - **Type de démarrage :** Automatique
 
-![[auto+system.png]]
+![auto+system.png](img/auto+system.png)
 ### 2. Configuration du Moteur de Base de Données
 Sécurisation de l'accès à l'instance lors de l'installation via l'onglet de configuration du serveur.
 
 - **Mode d'authentification :** Mixte (Authentification Windows et SQL Server).
 - **Administrateurs :** Ajout du compte administrateur courant (`SQLMASTER\Admin`) au groupe sysadmin.
 
-![[Moteurbdd.png]]
+![Moteurbdd.png](img/Moteurbdd.png)
 ### 3. Validation Post-Installation
 Une fois l'installation terminée, nous avons vérifié que les services étaient bien démarrés et que la connexion via SQL Server Management Studio (SSMS) était fonctionnelle.
 
-![[ValidationInstall.png]]
+![ValidationInstall.png](img/ValidationInstall.png)
 
 ---
 ## Labo 2 : Création de la base RateTracking
@@ -62,7 +62,7 @@ LOG ON
 
 La requête système `sys.database_files` confirme la création des fichiers aux emplacements demandés.
 
-![[ScriptValidé.png]]
+![ScriptValidé.png](img/ScriptValidé.png)
 
 ---
 ## Labo 2' : Optimisation de tempdb
@@ -95,7 +95,7 @@ ADD FILE (NAME = tempdev3, FILENAME = 'C:\SQLData\MKGTDEV\tempdb_file3.ndf', SIZ
 GO
 ````
 
-![[2èmescript 1.png]]
+![2èmescript.png](img/2èmescript.png)
 ### 2. Vérification après redémarrage
 
 Après redémarrage de l'instance, nous avons validé la nouvelle configuration via la vue système `sys.master_files`.
@@ -108,7 +108,7 @@ FROM sys.master_files
 WHERE database_id = 2;
 ```
 
-![[Preuve2eScript.png]]
+![Preuve2eScript.png](img/Preuve2eScript.png)
 
 ---
 ## Labo 3 : Sauvegardes et Restauration
@@ -119,17 +119,17 @@ Conformément au scénario, un nouveau disque de sauvegarde de 10 Go a été ajo
 **1. Ajout du disque virtuel (VDI)**
 Création d'un disque dynamique de 10 Go dans VirtualBox.
 
-![[DisqueU.png]]
+![DisqueU.png](img/DisqueU.png)
 
 **2. Initialisation sous Windows**
 Le disque a été initialisé (GPT) et formaté en NTFS avec la lettre de lecteur `U:`.
 
-![[DisqueUFormated.png]]
+![DisqueUFormated.png](img/DisqueUFormated.png)
 
 **3. Mise en place du fichier source**
 Le fichier `AdventureWorks.bak` fourni par les développeurs et téléchargé via `https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2019.bak`    a été déposé dans le répertoire `U:\BKPMKGTDEV`.
 
-![[Screen.bak.png]]
+![Screen.bak.png](img/Screen.bak.png)
 
 ---
 ### B. Restauration et Comparatif de Compression
@@ -173,7 +173,7 @@ ORDER BY backup_start_date DESC;
 GO
 ```
 
-![[ScriptBak.png]]
+![ScriptBak.png](img/ScriptBak.png)
 
 ### C. Automatisation des Sauvegardes (Agent SQL)
 Mise en place de la stratégie de sauvegarde hebdomadaire via un script générant les Jobs de l'Agent SQL.
@@ -216,7 +216,7 @@ EXEC sp_add_jobserver @job_name = 'Backup_AdventureWorks_DIFF_Friday';
 GO
 ```
 
-![[ScriptDays.png]]
+![ScriptDays.png](img/ScriptDays.png)
 
 ---
 ## Labo 4 : Gestion des Utilisateurs et Droits
@@ -232,7 +232,7 @@ net user User1 Password123! /add
 net user User2 Password123! /add
 ```
 
-![[AddUsers.png]]
+![AddUsers.png](img/AddUsers.png)
 ### 2. Configuration SQL Server (Script de Sécurité)
 
 Ce script assure la création des Logins (niveau serveur) et des Utilisateurs (niveau base `AdventureWorks`), ainsi que l'attribution des rôles `db_datareader` et `db_owner`.
@@ -273,16 +273,16 @@ ALTER ROLE db_owner ADD MEMBER [User2];
 GO
 ```
 
-![[ScriptUsers.png]]
+![ScriptUsers.png](img/ScriptUsers.png)
 ### 3. Validation des accès (Preuves)
 
 **Utilisateurs dans la base `AdventureWorks` :** On constate la présence des 4 utilisateurs configurés (`consult`, `redact`, `User1`, `User2`).
 
-![[UserAdventureWorks.png]]
+![UserAdventureWorks.png](img/UserAdventureWorks.png)
 
 **Vérification sur la base `RateTracking` :** Par défaut, ces utilisateurs n'ont pas été ajoutés à l'autre base `RateTracking`, garantissant le cloisonnement des accès.
 
-![[UsersRateTracking.png]]
+![UsersRateTracking.png](img/UsersRateTracking.png)
 ## Conclusion
 
 L'instance `MKTGDEV` est désormais configurée et opérationnelle. De la gestion du stockage physique à l'automatisation des sauvegardes, toutes les étapes critiques de l'administration d'une base de données SQL Server ont été réalisées et validées.
