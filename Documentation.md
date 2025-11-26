@@ -100,9 +100,7 @@ GO
 
 Après redémarrage de l'instance, nous avons validé la nouvelle configuration via la vue système `sys.master_files`.
 
-SQL
-
-```
+```sql
 SELECT name, physical_name, size/128.0 AS MB, state_desc 
 FROM sys.master_files 
 WHERE database_id = 2;
