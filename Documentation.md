@@ -1,8 +1,8 @@
-# TP Administration Base de Données - SQL Server 2022
+# Administration Base de Données - SQL Server 2022
 
 ![SQL Server](https://img.shields.io/badge/SQL%20Server-2022-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white) ![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge) 
 
-Ce dépôt contient la documentation technique et les scripts de configuration réalisés dans le cadre d'un TP d'Administration BDD. L'objectif est de configurer une instance SQL Server complète, d'optimiser le stockage, de gérer les sauvegardes et de sécuriser les accès.
+Ce repo contient la documentation technique et les scripts de configuration d'administration BDD. L'objectif est de configurer une instance SQL Server complète, d'optimiser le stockage, de gérer les sauvegardes et de sécuriser les accès.
 
 **Environnement :**
 - **Instance :** `MKTGDEV`
@@ -23,7 +23,7 @@ Ce dépôt contient la documentation technique et les scripts de configuration r
 Installation d'une nouvelle instance nommée `MKTGDEV` via le centre d'installation SQL Server 2022.
 
 ### 1. Configuration des Comptes de Service
-Conformément aux consignes, les services principaux (**SQL Server Agent** et **Moteur de base de données**) ont été configurés pour s'exécuter sous le compte système local, garantissant que l'instance dispose des privilèges nécessaires sur l'OS de la VM.
+Les services principaux (**SQL Server Agent** et **Moteur de base de données**) ont été configurés pour s'exécuter sous le compte système local, garantissant que l'instance dispose des privilèges nécessaires sur l'OS de la VM.
 
 - **Compte de service :** `AUTORITE NT\Système`
 - **Type de démarrage :** Automatique
@@ -231,7 +231,7 @@ Nous avons également configuré la stratégie de sauvegarde via l'outil graphiq
 
 ![Screenshot From 2025-11-26 11-53-27.png](img/Screenshot%20From%202025-11-26%2011-53-27.png)
 
-![[PlanBackup.png]](img/PlanBackup.png)
+![PlanBackup.png](img/PlanBackup.png)
 
 ---
 ## Labo 4 : Gestion des Utilisateurs et Droits
