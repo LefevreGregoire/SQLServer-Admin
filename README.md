@@ -4,11 +4,11 @@
 ![Status](https://img.shields.io/badge/Status-Terminé-success?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
-Bienvenue sur le dépôt du TP d'Administration de Base de Données. Ce projet couvre l'installation, la configuration, l'optimisation et la sécurisation d'une instance SQL Server 2022 en environnement Windows Server.
+Bienvenue sur le repo d'Administration de Base de Données. Ce projet couvre l'installation, la configuration, l'optimisation et la sécurisation d'une instance SQL Server 2022 en environnement Windows Server.
 
 ## Contenu du dépôt
 
-*   **`DOCUMENTATION.md`** : Le rapport technique complet avec les preuves visuelles (Screenshots).
+*   **`DOCUMENTATION.md`** : Le rapport technique complet.
 *   **`scripts/`** : L'ensemble des scripts T-SQL et PowerShell utilisés durant le TP, classés par étape.
 *   **`img/`** : Les captures d'écran validant les étapes.
 
@@ -24,4 +24,4 @@ Bienvenue sur le dépôt du TP d'Administration de Base de Données. Ce projet c
  **[Consulter la Documentation Technique Complète](./DOCUMENTATION.md)**
 
 ---
-*Réalisé par Lefevre Gregoire
+Réalisé par Lefevre Gregoire
