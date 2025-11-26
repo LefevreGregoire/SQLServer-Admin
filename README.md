@@ -24,4 +24,4 @@ Bienvenue sur le dépôt du TP d'Administration de Base de Données. Ce projet c
  **[Consulter la Documentation Technique Complète](./DOCUMENTATION.md)**
 
 ---
-*Réalisé par Lefevre Gregoire - Novembre 2025*
+*Réalisé par Lefevre Gregoire
