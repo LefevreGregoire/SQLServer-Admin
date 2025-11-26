@@ -218,10 +218,16 @@ GO
 
 ![ScriptDays.png](img/ScriptDays.png)
 
-### D. Alternative : Plan de Maintenance 
-En complément de l'automatisation par script, un plan de maintenance graphique a été configuré pour illustrer la seconde méthode possible via l'interface SSMS.
+### D. Méthode 2 : Plan de Maintenance
+Nous avons également configuré la stratégie de sauvegarde via l'outil graphique **Plan de Maintenance** de SSMS, sans utiliser de script.
 
-Ce plan inclut visuellement les tâches de sauvegarde complète et différentielle.
+**Procédure réalisée :**
+1.  Dans l'Explorateur d'objets, déplier le dossier **Gestion**.
+2.  Effectuer un **Clic droit** sur **Plans de maintenance** > **Assistant Plan de maintenance**.
+3.  Sélectionner les tâches requises :
+    *   *Sauvegarder la base de données (complète)*
+    *   *Sauvegarder la base de données (différentielle)*
+4.  Configurer les tâches pour la base `AdventureWorks` en ciblant le disque de sauvegarde `U:` et en activant la compression.
 
 ![Screenshot From 2025-11-26 11-53-27.png](img/Screenshot%20From%202025-11-26%2011-53-27.png)
 
