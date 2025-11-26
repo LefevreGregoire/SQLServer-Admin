@@ -274,7 +274,7 @@ GO
 ```
 
 ![ScriptUsers.png](img/ScriptUsers.png)
-### 3. Validation des accès (Preuves)
+### 3. Validation des accès
 
 **Utilisateurs dans la base `AdventureWorks` :** On constate la présence des 4 utilisateurs configurés (`consult`, `redact`, `User1`, `User2`).
 
