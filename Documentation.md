@@ -112,7 +112,7 @@ WHERE database_id = 2;
 ## Labo 3 : Sauvegardes et Restauration
 
 ### A. Préparation de l'infrastructure (Disque U:)
-Conformément au scénario, un nouveau disque de sauvegarde de 10 Go a été ajouté à la machine virtuelle pour simuler un support de stockage dédié.
+Un nouveau disque de sauvegarde de 10 Go a été ajouté à la machine virtuelle pour simuler un support de stockage dédié.
 
 **1. Ajout du disque virtuel (VDI)**
 Création d'un disque dynamique de 10 Go dans VirtualBox.
