@@ -231,8 +231,7 @@ Nous avons également configuré la stratégie de sauvegarde via l'outil graphiq
 
 ![Screenshot From 2025-11-26 11-53-27.png](img/Screenshot%20From%202025-11-26%2011-53-27.png)
 
-![Screenshot From 2025-11-26 11-54-51.png](img/Screenshot%20From%202025-11-26%2011-54-51.png)
-
+![[PlanBackup.png]](img/PlanBackup.png)
 
 ---
 ## Labo 4 : Gestion des Utilisateurs et Droits
