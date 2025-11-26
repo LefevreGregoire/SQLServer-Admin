@@ -218,6 +218,16 @@ GO
 
 ![ScriptDays.png](img/ScriptDays.png)
 
+### D. Alternative : Plan de Maintenance 
+En complément de l'automatisation par script, un plan de maintenance graphique a été configuré pour illustrer la seconde méthode possible via l'interface SSMS.
+
+Ce plan inclut visuellement les tâches de sauvegarde complète et différentielle.
+
+![Screenshot From 2025-11-26 11-53-27.png](img/Screenshot%20From%202025-11-26%2011-53-27.png)
+
+![Screenshot From 2025-11-26 11-54-51.png](img/Screenshot%20From%202025-11-26%2011-54-51.png)
+
+
 ---
 ## Labo 4 : Gestion des Utilisateurs et Droits
 
@@ -274,7 +284,7 @@ GO
 ```
 
 ![ScriptUsers.png](img/ScriptUsers.png)
-### 3. Validation des accès (Preuves)
+### 3. Validation des accès
 
 **Utilisateurs dans la base `AdventureWorks` :** On constate la présence des 4 utilisateurs configurés (`consult`, `redact`, `User1`, `User2`).
 
