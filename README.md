@@ -1,4 +1,4 @@
-# TP Administration SQL Server 2022
+# Administration SQL Server 2022
 
 ![SQL Server](https://img.shields.io/badge/SQL%20Server-2022-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Terminé-success?style=for-the-badge)
@@ -6,7 +6,7 @@
 
 Bienvenue sur le repo d'Administration de Base de Données. Ce projet couvre l'installation, la configuration, l'optimisation et la sécurisation d'une instance SQL Server 2022 en environnement Windows Server.
 
-## Contenu du dépôt
+## Contenu du repo
 
 *   **`DOCUMENTATION.md`** : Le rapport technique complet.
 *   **`scripts/`** : L'ensemble des scripts T-SQL et PowerShell utilisés durant le TP, classés par étape.
